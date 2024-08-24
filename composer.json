@@ -2,6 +2,7 @@
     "name": "dcc075/broken-access-control",
     "type": "project",
     "minimum-stability": "stable",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Security\\BrokenAccessControl\\": "src/"
