@@ -1,6 +1,7 @@
 {
     "name": "dcc075/broken-access-control",
     "type": "project",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Security\\BrokenAccessControl\\": "src/"
