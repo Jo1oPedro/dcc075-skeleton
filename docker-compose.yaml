@@ -1,0 +1,26 @@
+services:
+
+  # mysql
+  banco_de_dados:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "broken-access-control"
+    volumes:
+      - ./backup_banco_de_dados/database:/var/lib/mysql
+
+  broken-access-control:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        PHP_VERSION: '8.3.3-bullseye'
+    volumes:
+      - ./:/var/www/app/
+    ports:
+      - "8080:8000"
