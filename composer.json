@@ -1,5 +1,5 @@
 {
-    "name": "security/broken-access-control",
+    "name": "dcc075/broken-access-control",
     "type": "project",
     "autoload": {
         "psr-4": {
