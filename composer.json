@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "Security\\BrokenAccessControl\\": "src/"
-        }
+        },
+        "files": [
+            "Helpers/helper.php"
+        ]
     },
     "authors": [
         {
