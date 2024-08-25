@@ -1,7 +1,7 @@
 <?php
 
-use Security\BrokenAccessControl\Controllers\BankController;
-use Security\BrokenAccessControl\Http\MIddleware\Authenticate;
+use Security\Skeleton\Controllers\BankController;
+use Security\Skeleton\Http\Middleware\Authenticate;
 
 if($request->server['REQUEST_METHOD'] == 'GET') {
     switch ($request->server['PATH_INFO'] ?? "/") {

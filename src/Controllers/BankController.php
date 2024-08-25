@@ -1,6 +1,6 @@
 <?php
 
-namespace Security\BrokenAccessControl\Controllers;
+namespace Security\Skeleton\Controllers;
 
 class BankController extends Controller
 {
@@ -10,6 +10,7 @@ class BankController extends Controller
         $statement = $this->connection->prepare("SELECT * FROM bankAccounts WHERE id = ?");
         $statement->execute([$queryStringArray["id"]]);
         $results = $statement->fetch(\PDO::FETCH_ASSOC);
-        include __DIR__ . "/../resources/views/dale.php";
+        include __DIR__ . "/../resources/views/index.php";
+        exit;
     }
 }

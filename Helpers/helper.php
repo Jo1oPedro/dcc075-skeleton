@@ -1,7 +1,7 @@
 <?php
 
-use Security\BrokenAccessControl\Http\MIddleware\RequestHandler;
-use Security\BrokenAccessControl\Http\Request;
+use Security\Skeleton\Http\MIddleware\RequestHandler;
+use Security\Skeleton\Http\Request;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 

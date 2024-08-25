@@ -1,6 +1,6 @@
 <?php
 
-use Security\BrokenAccessControl\Http\Request;
+use Security\Skeleton\Http\Request;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 

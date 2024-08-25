@@ -1,8 +1,8 @@
 <?php
 
-namespace Security\BrokenAccessControl\Controllers;
+namespace Security\Skeleton\Controllers;
 
-use Security\BrokenAccessControl\Database\Connection;
+use Security\Skeleton\Database\Connection;
 
 abstract class Controller
 {

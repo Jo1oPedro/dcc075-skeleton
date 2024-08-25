@@ -1,6 +1,6 @@
 <?php
 
-namespace Security\BrokenAccessControl\Database;
+namespace Security\Skeleton\Database;
 
 class Connection
 {
@@ -11,7 +11,7 @@ class Connection
     {
         if(self::$pdo === null) {
             if(is_null(self::$pdo)) {
-                self::$pdo = new \PDO('mysql:host=banco_de_dados;dbname=broken-access-control', 'user', 'secret');
+                self::$pdo = new \PDO('mysql:host=banco_de_dados;dbname=seguranca', 'user', 'secret');
             }
         }
         return self::$pdo;

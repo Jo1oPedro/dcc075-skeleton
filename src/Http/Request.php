@@ -1,6 +1,6 @@
 <?php
 
-namespace Security\BrokenAccessControl\Http;
+namespace Security\Skeleton\Http;
 
 class Request
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Security\BrokenAccessControl\Http\MIddleware;
+namespace Security\Skeleton\Http\Middleware;
 
-use Security\BrokenAccessControl\Http\Request;
+use Security\Skeleton\Http\Request;
 
 interface MiddlewareInterface
 {

@@ -10,11 +10,26 @@ services:
       MYSQL_ROOT_PASSWORD: "secret"
       MYSQL_USER: "user"
       MYSQL_PASSWORD: "secret"
-      MYSQL_DATABASE: "broken-access-control"
+      MYSQL_DATABASE: "seguranca"
     volumes:
       - ./backup_banco_de_dados/database:/var/lib/mysql
 
-  broken-access-control:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8003:80"
+    volumes:
+      - ./docker/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    environment:
+      #PMA_ARBITRARY: 1
+      PMA_HOST: banco_de_dados
+    depends_on:
+      - banco_de_dados
+    networks:
+      - my-shared-network
+
+  php:
     build:
       context: .
       dockerfile: ./Dockerfile
