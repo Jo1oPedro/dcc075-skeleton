@@ -10,3 +10,8 @@ function middleware(string ...$middlewares): void {
     $request = Request::getRequest();
     $requestHandler->handle($request);
 }
+
+function view(string $path, array $variables = []): string {
+    extract($variables);
+    return require_once __DIR__ . "/../src/resources/views/{$path}";
+}

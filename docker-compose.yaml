@@ -26,8 +26,6 @@ services:
       PMA_HOST: banco_de_dados
     depends_on:
       - banco_de_dados
-    networks:
-      - my-shared-network
 
   php:
     build:
