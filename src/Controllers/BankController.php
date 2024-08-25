@@ -10,7 +10,7 @@ class BankController extends Controller
         $statement = $this->connection->prepare("SELECT * FROM bankAccounts WHERE id = ?");
         $statement->execute([$queryStringArray["id"]]);
         $results = $statement->fetch(\PDO::FETCH_ASSOC);
-        view("index.php", [
+        view("index", [
             "results" => $results
         ]);
     }

@@ -13,5 +13,5 @@ function middleware(string ...$middlewares): void {
 
 function view(string $path, array $variables = []): string {
     extract($variables);
-    return require_once __DIR__ . "/../src/resources/views/{$path}";
+    return require_once __DIR__ . "/../src/resources/views/{$path}.php";
 }
