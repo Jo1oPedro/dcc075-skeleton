@@ -1,4 +1,5 @@
-backup_banco_de_dados
+docker/backup_banco_de_dados
+docker/phpmyadmin
 vendor
 database.php
 .idea
