@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: "secret"
       MYSQL_DATABASE: "seguranca"
     volumes:
-      - ./backup_banco_de_dados/database:/var/lib/mysql
+      - ./docker/backup_banco_de_dados/database:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
